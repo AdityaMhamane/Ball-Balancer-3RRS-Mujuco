@@ -64,7 +64,7 @@
 
     <body name="Top" pos="0 0 0.138969" >
     <freejoint name="top_freejoint"/> <!-- CRITICAL: Allows the platform to move -->
-    <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Top" contype="0" conaffinity="0"/>
+    <geom type="mesh" rgba="0.5 0.2 0.2 0.8" mesh="Top" contype="0" conaffinity="0"/>
         <site name="ball3Top" pos="0.065125 -0.0001 -0.001504 " size="0.005" type="sphere" rgba="0 1 1 1"/>
 
         <site name="ball1Top" pos="-0.032649  -0.05635  -0.001504 " size="0.005" type="sphere" rgba="1 0 1 1"/>
@@ -74,6 +74,8 @@
       
     </body>
   </worldbody>
+
+  <!--For close loop constraints-->
   <equality>
 
     <connect name="kinematic_link3" active="true" body1="Unactuated3" body2="Top" anchor="0.0154082 0.0623239 -0.00375" solref="0.0001 1" solimp="0.9999 0.9999 0.0001 0.5 2" />
@@ -87,58 +89,5 @@
     <general name="leg2_ctrl" joint="Acutated2Joint"  />
     <general name="leg3_ctrl" joint="Actuated3Jont"   />
   </actuator>
+
 </mujoco>
-
-<!--
-<mujoco model="Assembly3RRS_urdf">
-  <compiler angle="radian"/>
-  <option gravity="0 0 0"/>
-  <asset>
-    <mesh name="base_link" content_type="model/stl" file="meshes/base_link.STL"/>
-    <mesh name="Actuated1" content_type="model/stl" file="meshes/Actuated1.STL"/>
-    <mesh name="Unactuated1" content_type="model/stl" file="meshes/Unactuated1.STL"/>
-    <mesh name="Ball1" content_type="model/stl" file="meshes/Ball1.STL"/>
-    <mesh name="Actuated2" content_type="model/stl" file="meshes/Actuated2.STL"/>
-    <mesh name="Unactuated2" content_type="model/stl" file="meshes/Unactuated2.STL"/>
-    <mesh name="Ball2" content_type="model/stl" file="meshes/Ball2.STL"/>
-    <mesh name="Actuated3" content_type="model/stl" file="meshes/Actuated3.STL"/>
-    <mesh name="Unactuated3" content_type="model/stl" file="meshes/Unactuated3.STL"/>
-    <mesh name="Ball3" content_type="model/stl" file="meshes/Ball3.STL"/>
-  </asset>
-
-  <worldbody>
-    <geom type="mesh" rgba="0.74902 0.74902 0.74902 1" mesh="base_link" contype="0" conaffinity="0"/>
-    
-    <body name="Actuated1" pos="-0.0353488 -0.0262506 0.0363" quat="0.612372 -0.612372 -0.353553 0.353553">
-      <joint name="Actuated1Joint" axis="0 0 -1"/>
-      <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Actuated1" contype="0" conaffinity="0"/>
-      <body name="Unactuated1" pos="-0.00954794 -0.0388438 -0.01315">
-        <joint name="Unactuated1Joint" axis="0 0 -1"/>
-        <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Unactuated1" contype="0" conaffinity="0"/>
-        <geom pos="-0.0153955 -0.062327 -0.00375" quat="1 0 0 0" type="mesh" rgba="0.333333 0.333333 0.333333 1" mesh="Ball1" contype="0" conaffinity="0"/>
-      </body>
-    </body>
-
-    <body name="Actuated2" pos="-0.0059039 0.0430314 0.0363" quat="0.612372 -0.612372 0.353553 -0.353553">
-      <joint name="Acutated2Joint" axis="0 0 -1"/>
-      <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Actuated2" contype="0" conaffinity="0"/>
-      <body name="Unactuated2" pos="-0.00954933 -0.0388434 -0.01315">
-        <joint name="Unactuated2Joint" axis="0 0 -1"/>
-        <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Unactuated2" contype="0" conaffinity="0"/>
-        <geom pos="-0.0153943 -0.0623273 -0.00375" quat="0.707107 0 0 0.707107" type="mesh" rgba="0.333333 0.333333 0.333333 1" mesh="Ball2" contype="0" conaffinity="0"/>
-      </body>
-    </body>
-
-    <body name="Actuated3" pos="0.0393737 -0.0171096 0.0363" quat="0.707107 0.707107 0 0">
-      <joint name="Actuated3Jont" axis="0 0 -1"/>
-      <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Actuated3" contype="0" conaffinity="0"/>
-      <body name="Unactuated3" pos="0.0095617 0.0388404 -0.01315">
-        <joint name="Unactuated3Joint" axis="0 0 -1"/>
-        <geom type="mesh" rgba="0.8 0.8 0.8 1" mesh="Unactuated3" contype="0" conaffinity="0"/>
-        <geom pos="0.0154082 0.0623239 -0.00375" quat="1 0 0 0" type="mesh" rgba="0.333333 0.333333 0.333333 1" mesh="Ball3" contype="0" conaffinity="0"/>
-      </body>
-    </body>
-
-  </worldbody>
-</mujoco>
--->
