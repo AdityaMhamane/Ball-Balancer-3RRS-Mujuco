@@ -2,7 +2,7 @@ import mujoco
 import mujoco.viewer
 import time
 # Load the model from your XML file
-model = mujoco.MjModel.from_xml_path('Final2OpenChain.xml')
+model = mujoco.MjModel.from_xml_path('scene.xml')
 data = mujoco.MjData(model)
 
 servo_1_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "leg1_ctrl")
