@@ -6,8 +6,9 @@ A MuJoCo (MJCF/XML) model of a ball-balancing robot built on a **3RRS parallel m
 
 ![Ball Balancing Robot in MuJoCo](images/Screenshot%20From%202026-10-04%2004-16-37.png)
 
+Video of the model running in MuJoCo (click to play):
 
-<video src="videos/2026-10-04 04-18-05.mp4" controls="controls" width="700"></video>
+[![Ball Balancing Robot Simulation Video](images/video_thumbnail.png)](videos/2026-10-04%2004-18-05.mp4)
 
 CAD model Assembly in Fusion360: [`images/Top_SpherialPtDelta.png`](images/Top_SpherialPtDelta.png)
 
