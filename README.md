@@ -1,6 +1,6 @@
-# Ball Balancing Robot(3RRS) — MuJoCo Simulation
+# Ball Balancing Robot(3RRS) MuJoCo Model
 
-A MuJoCo (MJCF/XML) model of a ball-balancing robot built on a **3RRS parallel manipulator** (three legs, each with an actuated revolute joint(**R**), an unactuated revolute joint(**R**) and unactuated spherical joint(**S**)), including closed-loop constraints.
+A MuJoCo (MJCF/XML) model of a ball-balancing robot built on a **3RRS parallel manipulator** (three legs, each with an actuated revolute joint(**R**), an unactuated revolute joint(**R**) and unactuated spherical joint(**S**)).
 
 ## Preview
 
@@ -29,10 +29,9 @@ Requires Python with [MuJoCo](https://github.com/google-deepmind/mujoco) install
 
 ```bash
 pip install mujoco
-python test.py
+python test.py # This launches the interactive viewer.
 ```
 
-This launches the interactive viewer where you can adjust the `leg1_ctrl`, `leg2_ctrl`, `leg3_ctrl` controls.
 
 ## Credits & Attribution
 
