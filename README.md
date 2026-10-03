@@ -35,7 +35,7 @@ python test.py # This launches the interactive viewer.
 
 ## Credits & Attribution
 
-- **CAD models** are **not** mine. Original hardware/CAD repository: [KoshiroRobot/Ball-Balancing-Robot](https://github.com/KoshiroRobot/Ball-Balancing-Robot)
+- **CAD models** are **not** mine. Original owner's repository: [KoshiroRobot/Ball-Balancing-Robot](https://github.com/KoshiroRobot/Ball-Balancing-Robot)
 - This MuJoCo adaptation was written by **Aditya Shivanand Mhamane**.
 
 ## Inspiration
